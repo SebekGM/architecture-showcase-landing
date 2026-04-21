@@ -16,7 +16,7 @@ The project was created to demonstrate advanced CSS/SASS skills and clean HTML s
 - Optimized assets for fast loading
 
 ## 🚀 Live Demo:
-[Link do Twojej strony - np. z GitHub Pages / Vercel]
+
 
 ## 📝 Lessons Learned:
 - How to structure complex SASS files using the 7-1 pattern (or simple modularity).
