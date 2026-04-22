@@ -11,14 +11,14 @@ $color-accent: #51331C;
 $color-btn: #B4773B;
 
 
-// Fonts
+// Font families
 $font-family-primary: 'Mulish', sans-serif;
 
 
-// Sizes
+// Font sizes
 $font-size-10: .625rem; // 10px
 $font-size-12: .75rem; // 12px
-$font-size-14: .875rem // 14px
+$font-size-14: .875rem; // 14px
 $font-size-16: 1rem; // 16px
 $font-size-18: 1.125rem // 18px
 $font-size-20: 1.25rem; // 20px
@@ -30,3 +30,11 @@ $font-size-44: 2.75rem; // 44px
 $font-size-48: 3rem; // 48px
 $font-size-52: 3.25; // 52px
 $font-size-56: 3.5rem; // 56px
+
+
+// Breakpoints
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+$bp-xxl: 1400px;
