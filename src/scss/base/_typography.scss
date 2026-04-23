@@ -6,3 +6,11 @@
 
 // Text sizes
 $txt-primary: clamp($font-size-14, .7772rem + .4348vw, $font-size-18);
+$txt-small: clamp($font-size-10, .5761rem + .2174vw, $font-size-12);
+$txt-subheader: clamp($font-size-16, .9022rem + .4348vw, $font-size-20);
+
+$heading-1: clamp($font-size-36, 1.7609rem + 2.1739vw, $font-size-56);
+$heading-2: clamp($font-size-32, 1.6087rem + 1.7391vw, $font-size-48);
+$heading-3: clamp($font-size-24, 1.1087rem + 1.7391vw, $font-size-40);
+$heading-4: clamp($font-size-20, .9565rem + 1.3043vw, $font-size-32);
+$heading-5: clamp($font-size-12, .6522rem + .4348vw, $font-size-16);
