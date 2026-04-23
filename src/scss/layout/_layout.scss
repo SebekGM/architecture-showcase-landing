@@ -1,5 +1,20 @@
 @use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
 
 .container {
     max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @include respond-to($bp-lg) {
+        padding: 0 30px;
+    }
+}
+
+.section {
+    padding: 0 $sp-section-mobile;
+
+    @include respond-to($bp-xl) {
+        padding: 0 $sp-section;
+    }
 }
