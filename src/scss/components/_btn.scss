@@ -1,0 +1,42 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+@use '../base/typography' as *;
+
+
+.btn {
+    @include text-style($txt-primary, $font-weight-medium);
+
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 6px 10px;
+
+    @include respond-to($bp-lg) {
+        padding: 8px 16px;
+    }
+
+    @include respond-to($bp-xl) {
+        padding: 16px 32px;
+    }
+
+    &-primary {
+        background-color: $color-btn;
+        border: 1px solid transparent;
+        color: $color-bg-primary;
+        transition: $transition-btn;
+
+        &:hover {
+            @include hover-btn-primary;
+        }
+    }
+
+    &-outline {
+        background-color: transparent;
+        border: 1px solid $color-btn;
+        color: $color-btn;
+        transition: $transition-btn;
+
+        &:hover {
+            @include hover-btn-outline($color-btn, $color-bg-primary);
+        }
+    }
+}
