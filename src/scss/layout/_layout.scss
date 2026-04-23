@@ -12,9 +12,9 @@
 }
 
 .section {
-    padding: 0 $sp-section-mobile;
+    padding: $sp-section-mobile 0;
 
     @include respond-to($bp-xl) {
-        padding: 0 $sp-section;
+        padding: $sp-section 0;
     }
 }
