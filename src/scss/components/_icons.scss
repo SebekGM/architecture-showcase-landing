@@ -1,14 +1,11 @@
 @use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
 @use '../base/typography' as *;
 
-.link {
-    text-decoration: none;
+.icon {
 
-    &-logo {
+    &.toggle-menu__open {
         color: $color-accent;
-    }
-
-    &-nav {
-        color: $color-txt-primary;
+        font-size: 26px;
     }
 }

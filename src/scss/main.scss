@@ -3,5 +3,11 @@
 @use 'base/typography' as *;
 @use 'abstract/mixins' as *;
 @use 'components/btn' as *;
-@use 'layout/layout' as *;
 @use 'components/link' as *;
+@use 'components/icons' as *;
+@use 'layout/layout' as *;
+@use 'layout/header' as *;
+
+body {
+    position: relative;
+}

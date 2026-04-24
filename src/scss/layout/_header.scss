@@ -1,0 +1,33 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.h-mobile {
+    background-color: rgba($color-bg-secondary, .5);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    @include respond-to($bp-lg) {
+        display: none;
+    }
+
+    .container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        font-size: 40px;
+    }
+
+    &__menu-content {
+        background-color: $color-bg-secondary;
+        position: absolute;
+        opacity: .75;
+        top: 0;
+        right: 0;
+    }
+}
