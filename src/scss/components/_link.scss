@@ -1,0 +1,10 @@
+@use '../abstract/variables' as *;
+@use '../base/typography' as *;
+
+.link {
+    text-decoration: none;
+
+    &-logo {
+        color: $color-accent;
+    }
+}
