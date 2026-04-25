@@ -20,5 +20,13 @@
 }
 
 .hidden {
-    display: none !important;
+    display: none;
+}
+
+.is-visible {
+    
+    &::before {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
 }
