@@ -27,6 +27,11 @@
         &:hover {
             @include hover-btn-primary;
         }
+
+        a {
+            color: $color-bg-primary;
+            text-decoration: none;
+        }
     }
 
     &-outline {
@@ -37,6 +42,15 @@
 
         &:hover {
             @include hover-btn-outline($color-btn, $color-bg-primary);
+
+            a {
+                color: $color-bg-primary;
+            }
+        }
+
+        a {
+            color: $color-btn;
+            text-decoration: none;
         }
     }
 }

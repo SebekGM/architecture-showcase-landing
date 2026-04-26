@@ -4,7 +4,7 @@
 
 // MOBILE MENU
 .h-mobile {
-    background-color: rgba($color-bg-secondary, .5);
+    background-color: $color-bg-secondary;
     height: 40px;
     padding: 10px 0;
     position: fixed;
@@ -90,7 +90,7 @@
     display: none;
 
     @include respond-to($bp-lg) {
-        background-color: rgba($color-bg-secondary, .5);
+        background-color: $color-bg-secondary;
         display: block;
         padding: 20px 0;
         position: fixed;

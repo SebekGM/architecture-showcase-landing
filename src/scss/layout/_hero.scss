@@ -2,3 +2,72 @@
 @use '../abstract/mixins' as *;
 @use '../base/typography' as *;
 
+.hero {
+    background-color: $color-bg-secondary;
+    margin-top: 60px;
+    row-gap: $sp-grid-medium;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    &__description {
+        color: $color-txt-primary;
+
+
+        &-heading {
+            @include heading-style($heading-1);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        &-text {
+            @include text-style($txt-subheader);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__cta {
+        display: flex;
+        column-gap: 15px;
+        justify-content: center;
+    }
+
+    &__image {
+        
+        &-img {
+            display: block;
+            max-width: 100%;
+            height: 60vh;
+            margin: 0 auto;
+        }
+    }
+
+    @include respond-to($bp-xl) {
+        margin-top: 0;
+        box-shadow: 0px 3px 11px -1px rgba(0, 0, 0, 0.4);
+
+        .container {
+            grid-template-columns: 40% 60%;
+            column-gap: $sp-grid-small;
+        }
+
+        &__description {
+            margin-top: 60px;
+        }
+
+        &__cta {
+            margin-top: 80px;
+        }
+
+        &__image {
+
+            &-img {
+                margin-top: -40px;
+                height: 70vh;
+            }
+        }
+    }
+}
