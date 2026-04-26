@@ -8,6 +8,7 @@
 @use 'layout/layout' as *;
 @use 'layout/header' as *;
 @use 'layout/hero' as *;
+@use 'layout/award' as *;
 
 body {
     font-family: $font-family-primary;
