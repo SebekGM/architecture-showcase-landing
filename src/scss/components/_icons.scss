@@ -8,4 +8,10 @@
         color: $color-accent;
         font-size: 26px;
     }
+
+    &.toggle-menu__close {
+        margin-bottom: 20px;
+        padding: 20px 20px;
+        text-align: end;
+    }
 }

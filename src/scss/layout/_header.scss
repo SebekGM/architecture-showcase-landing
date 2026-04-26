@@ -1,6 +1,8 @@
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
+@use '../base/typography' as *;
 
+// MOBILE MENU
 .h-mobile {
     background-color: rgba($color-bg-secondary, .5);
     padding: 10px 0;
@@ -23,7 +25,7 @@
         opacity: 0;
         visibility: hidden;
         transition: opacity .4s ease,
-                    visibility .4s ease;
+            visibility .4s ease;
     }
 
     &.is-visible::before {
@@ -42,7 +44,7 @@
     }
 
     &__logo {
-        font-size: 40px;
+        font-size: $heading-2;
     }
 
     &__menu-content {
@@ -60,14 +62,8 @@
         transform: translateX(100%);
         opacity: 0;
         transition: transform .4s cubic-bezier(.4, 0, .2, 1),
-                    opacity .3s ease;
+            opacity .3s ease;
         will-change: transform;
-
-        .toggle-menu__close {
-            margin-bottom: 20px;
-            padding: 20px 20px;
-            text-align: end;
-        }
     }
 
     &.is-visible &__menu-content {
@@ -83,6 +79,47 @@
 
             &__item:not(:first-child) {
                 margin-top: 20px;
+            }
+        }
+    }
+}
+
+// DESKTOP MENU
+.h-desktop {
+    display: none;
+
+    @include respond-to($bp-lg) {
+        background-color: rgba($color-bg-secondary, .5);
+        display: block;
+        padding: 20px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+
+        .container {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__logo {
+            font-size: $heading-1;
+        }
+
+        &__menu {
+
+            .list {
+                display: flex;
+
+                &__item {
+                    font-size: 24px;
+
+                    &:not(:last-child) {
+                        margin-right: 40px;
+                    }
+                }
             }
         }
     }
