@@ -10,6 +10,10 @@
 @use 'layout/hero' as *;
 @use 'layout/award' as *;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: $font-family-primary;
     position: relative;
