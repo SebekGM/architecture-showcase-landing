@@ -1,3 +1,112 @@
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
 @use '../base/typography' as *;
+
+.opinion {
+    background-color: $color-bg-primary;
+
+    &__description {
+        text-align: center;
+        margin-bottom: 30px;
+
+        &-heading {
+            font-size: $heading-2;
+            font-weight: $font-weight-bold;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        &-text {
+            font-size: $txt-primary;
+            line-height: 1.6;
+        }
+    }
+
+    &__boxes {
+        margin-top: 50px;
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &__image {
+
+                &--img {
+                    border-radius: 50%;
+                    display: block;
+                    margin: 0 auto;
+                    height: 20vh;
+                    width: 30vw;
+                }
+            }
+
+            &__name {
+                margin-top: 30px;
+
+                &-user {
+                    font-size: $heading-5;
+                    font-weight: $font-weight-bold;
+                    line-height: 1.2;
+                }
+
+                &-profession {
+                    font-size: $heading-5;
+                    line-height: 1.6;
+                    text-align: center;
+                }
+            }
+
+            &__opinion {
+                text-align: center;
+                margin-top: 30px;
+
+                &-heading {
+                    font-size: $heading-4;
+                    font-weight: $font-weight-bold;
+                    line-height: 1.2;
+                }
+
+                &-text {
+                    font-size: $heading-5;
+                    max-width: 50%;
+                    margin: 25px auto 0 auto;
+                    line-height: 1.6;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+
+    @include respond-to($bp-lg) {
+        &__boxes {
+
+            .box {
+
+                &__image {
+
+                    &--img {
+                        height: 50vh;
+                    }
+                }
+            }
+        }
+    }
+
+    @include respond-to($bp-xl) {
+        &__boxes {
+
+            .box {
+
+                &__image {
+
+                    &--img {
+                        height: 40vh;
+                        width: 20vw;
+                    }
+                }
+            }
+        }
+    }
+}
