@@ -1,0 +1,135 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+@use '../base/typography' as *;
+
+.projects {
+    background-color: $color-bg-primary;
+
+    &__description {
+        text-align: center;
+        
+        &-heading {
+            font-size: $heading-2;
+            font-weight: $font-weight-bold;
+            margin-bottom: 30px;
+        }
+
+        &-text {
+            font-size: $txt-primary;
+            line-height: 1.6;
+        }
+    }
+
+    &__boxes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 40px;
+        
+        .box {
+            position: relative;
+            margin: 0 auto;
+
+            &:not(:first-child) {
+                margin-top: 80px;
+            }
+
+            &__image {
+                position: relative;
+                overflow: hidden;
+                
+                &-img {
+                    max-width: 100%;
+                    display: block;
+                    height: 50vh;
+                    border-radius: 10px;
+                    object-fit: cover;
+                }
+
+                &:hover::after {
+                    opacity: 1;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    border-radius: 10px;
+                    bottom: 0;
+                    top: 0;
+                    z-index: 100;
+                    background-color: rgba(0, 0, 0, .2);
+                    transition: all .3s ease-in-out;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+            }
+
+            &__description {
+                background-color: $color-bg-white;
+                border-radius: 10px;
+                position: absolute;
+                top: 92%;
+                left: 10%;
+                right: 10%;
+                padding: 10px 20px;
+                z-index: 500;
+
+                &-heading {
+                    font-size: $heading-5;
+                    font-weight: $font-weight-bold;
+                    margin-bottom: 10px;
+                }
+
+                &-address {
+                    display: flex;
+
+                    &--icon {
+                        font-size: $heading-5;
+                        margin-right: 10px;
+                    }
+
+                    &--name {
+                        font-size: $heading-5;
+                    }
+                }
+            }
+        }
+    }
+
+    @include respond-to($bp-lg) {
+
+        &__description {
+            text-align: start;
+
+            &-heading {
+                margin-top: 60px;
+            }
+        }
+
+        &__boxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            margin: 0;
+
+            .box {
+                &:first-child {
+                    margin-top: 80px;
+                }
+
+                &__description {
+                    top: 89%;
+                }
+            }
+        }
+    }
+
+    @include respond-to($bp-xl) {
+        &__boxes {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+    }
+}
