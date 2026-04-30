@@ -1,0 +1,14 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+@use '../base/typography' as *;
+
+.f {
+    background-color: $color-bg-secondary;
+    padding: 40px 0 20px;
+
+    &-main {
+        text-align: center;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
