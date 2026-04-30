@@ -13,6 +13,7 @@
 @use 'layout/opinions' as *;
 @use 'layout/contact' as *;
 @use 'layout/footer' as *;
+@use 'components/notification' as *;
 
 html {
     scroll-behavior: smooth;

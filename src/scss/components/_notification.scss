@@ -1,0 +1,30 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+@use '../base/typography' as *;
+
+.notification {
+    position: fixed;
+    top: 150px;
+    transform: translateX(800%);
+    font-size: $heading-5;
+    font-weight: $font-weight-bold;
+    z-index: 1000;
+
+    &-success {
+        display: none;
+        color: #008000;
+
+        &.open {
+            transform: translateX(-250%);
+        }
+    }
+
+    &-error {
+        display: none;
+        color: #F00;
+
+        &.open {
+            transform: translateX(-250%);
+        }
+    }
+}
