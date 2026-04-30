@@ -10,5 +10,136 @@
         text-align: center;
         display: flex;
         flex-direction: column-reverse;
+
+        &__right-col {
+
+            &-heading {
+                margin-bottom: 20px;
+
+                h4 {
+                    font-size: $heading-5;
+                    text-transform: uppercase;
+                    font-weight: $font-weight-bold;
+                    color: $color-accent;
+                } 
+            }
+
+            &-fastlinks,
+            &-regulations,
+            &-social {
+
+                .icon-list {
+
+                    .icon {
+
+                        i {
+                            color: $color-accent;
+                            font-size: $txt-primary;
+                        }
+                    }
+
+                    .text {
+                        font-size: $heading-5;
+
+                        a {
+                            color: $color-txt-additional;
+                            padding: 5px;
+
+                            &:hover {
+                                background-color: $color-bg-additional;
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+
+        &__left {
+            margin-top: 20px;
+
+            &-logo {
+
+                i {
+                    font-size: $heading-1;
+                    color: $color-accent;
+                }
+            }
+
+            &-contact {
+
+                .icon-list {
+                    margin-top: 20px;
+
+                    .icon {
+                        color: $color-accent;
+                        font-size: $txt-primary;
+                    }
+
+                    .text {
+                        font-size: $heading-5;
+
+                        a {
+                            color: $color-txt-additional;
+
+                            &:hover {
+                                background-color: $color-bg-additional;
+                                padding: 5px;
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    &-copyright {
+        text-align: center;
+        font-size: $txt-small;
+    }
+
+    @include respond-to($bp-lg) {
+        &-main {
+            flex-direction: row;
+            justify-content: space-between;
+
+            &__right {
+                display: flex;
+                gap: 60px;
+                
+                &-col {
+                    &-heading {
+                        text-align: start;
+                    }
+
+                    .icon-list {
+                        margin-top: 25px;
+                        justify-content: start;
+                    }
+                }
+            }
+
+            &__left {
+                .icon-list {
+                    justify-content: start;
+                }
+
+                &-logo {
+                    text-align: left;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+
+        &-copyright {
+            text-align: right;
+        }
     }
 }
